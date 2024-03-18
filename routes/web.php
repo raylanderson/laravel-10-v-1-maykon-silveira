@@ -1,22 +1,11 @@
 <?php
 
-use App\Http\Controllers\Ms\MsController;
+use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 
-Route::get('/clientes', [MsController::class, 'clientes']);
+Route::get('/index-cliente', [ClienteController::class, 'index'])->name('cliente.index');
